@@ -1,0 +1,12 @@
+{
+  "name": "tdah",
+  "version": "0.1.0",
+  "description": "Saida moldada para leitor com TDAH: decide entre EXECUTAR e ENTENDER, poe a acao ou a resposta na primeira linha, traduz todo termo tecnico, corta preambulo e fechamento.",
+  "license": "MIT",
+  "homepage": "https://github.com/rafamarchetti/tdah",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Modo TDAH",
+    "shortDescription": "Saida em PT-BR moldada para TDAH no Kimi Code CLI"
+  }
+}

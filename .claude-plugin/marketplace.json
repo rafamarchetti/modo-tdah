@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "tdah",
+  "description": "Saida em PT-BR moldada para TDAH, em dois modos: EXECUTAR e ENTENDER.",
+  "owner": {
+    "name": "Rafael Marchetti"
+  },
+  "plugins": [
+    {
+      "name": "tdah",
+      "description": "Dois modos de saida para leitor com TDAH: acao primeiro (EXECUTAR) ou resposta primeiro (ENTENDER).",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

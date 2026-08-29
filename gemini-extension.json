@@ -1,0 +1,6 @@
+{
+  "name": "tdah",
+  "version": "0.1.0",
+  "description": "Molda a saida do Gemini CLI para um leitor com TDAH: dois modos, acao ou resposta na primeira linha, termo tecnico traduzido na hora.",
+  "contextFileName": "GEMINI.md"
+}

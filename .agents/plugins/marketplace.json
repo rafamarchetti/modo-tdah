@@ -1,0 +1,21 @@
+{
+  "name": "tdah",
+  "interface": {
+    "displayName": "Modo TDAH"
+  },
+  "plugins": [
+    {
+      "name": "tdah",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/rafamarchetti/tdah.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

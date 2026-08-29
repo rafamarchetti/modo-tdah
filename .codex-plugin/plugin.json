@@ -1,0 +1,28 @@
+{
+  "name": "tdah",
+  "version": "0.1.0",
+  "description": "Saida moldada para TDAH no Codex: dois modos, acao ou resposta na primeira linha, sem preambulo.",
+  "author": {
+    "name": "Rafael Marchetti"
+  },
+  "homepage": "https://github.com/rafamarchetti/tdah",
+  "repository": "https://github.com/rafamarchetti/tdah",
+  "license": "MIT",
+  "keywords": ["tdah", "adhd", "output-style", "pt-br", "acessibilidade", "skills"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Modo TDAH",
+    "shortDescription": "Saida em PT-BR moldada para TDAH",
+    "longDescription": "Decide entre EXECUTAR e ENTENDER antes de escrever. EXECUTAR: acao na primeira linha, passos numerados, estado repetido a cada turno, estimativa concreta. ENTENDER: resposta na primeira linha, um assunto por vez, todo termo tecnico traduzido na mesma frase, teto de quinze linhas com corte oferecido.",
+    "developerName": "Rafael Marchetti",
+    "category": "Productivity",
+    "capabilities": ["Instructions"],
+    "websiteURL": "https://github.com/rafamarchetti/tdah",
+    "defaultPrompt": [
+      "Use o modo tdah nesta tarefa.",
+      "Responde no modo ENTENDER.",
+      "Responde no modo EXECUTAR."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

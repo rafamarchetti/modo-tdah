@@ -1,0 +1,16 @@
+{
+  "name": "tdah",
+  "version": "0.1.0",
+  "description": "Saida moldada para um leitor com TDAH, em dois modos: EXECUTAR e ENTENDER. PT-BR.",
+  "license": "MIT",
+  "homepage": "https://github.com/rafamarchetti/tdah",
+  "private": true,
+  "keywords": ["pi-package"],
+  "omp": {
+    "extensions": []
+  },
+  "pi": {
+    "extensions": [],
+    "skills": ["./skills"]
+  }
+}
