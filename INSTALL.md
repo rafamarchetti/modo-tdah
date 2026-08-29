@@ -8,7 +8,7 @@ de um jeito diferente.
 ## Claude Code — plugin (recomendado)
 
 ```bash
-claude plugin marketplace add rafamarchetti/tdah
+claude plugin marketplace add rafamarchetti/modo-tdah
 claude plugin install tdah
 ```
 
@@ -23,10 +23,10 @@ Conferir se pegou: abra uma sessão nova. O texto da skill aparece no começo.
 1. Copie a skill:
 
 ```bash
-git clone https://github.com/rafamarchetti/tdah.git
+git clone https://github.com/rafamarchetti/modo-tdah.git
 mkdir -p ~/.claude/skills ~/.claude/hooks
-cp -r tdah/skills/tdah ~/.claude/skills/
-cp tdah/hooks/always-on.sh ~/.claude/hooks/tdah-activate.sh
+cp -r modo-tdah/skills/tdah ~/.claude/skills/
+cp modo-tdah/hooks/always-on.sh ~/.claude/hooks/tdah-activate.sh
 ```
 
 2. Ajuste o caminho da skill dentro do hook copiado — na instalação manual ela
@@ -66,7 +66,7 @@ liga sozinha.
 ## Gemini CLI
 
 ```bash
-git clone https://github.com/rafamarchetti/tdah.git ~/.gemini/extensions/tdah
+git clone https://github.com/rafamarchetti/modo-tdah.git ~/.gemini/extensions/tdah
 ```
 
 O `gemini-extension.json` aponta para `GEMINI.md`, que importa o `SKILL.md`
@@ -77,9 +77,9 @@ inteiro com `@./skills/tdah/SKILL.md`.
 ## Cursor
 
 ```bash
-git clone https://github.com/rafamarchetti/tdah.git /tmp/tdah
+git clone https://github.com/rafamarchetti/modo-tdah.git /tmp/modo-tdah
 mkdir -p .cursor/skills
-cp -r /tmp/tdah/.cursor/skills/tdah .cursor/skills/
+cp -r /tmp/modo-tdah/.cursor/skills/tdah .cursor/skills/
 ```
 
 Por projeto. Para valer em todos, copie para `~/.cursor/skills/`.
@@ -89,7 +89,7 @@ Por projeto. Para valer em todos, copie para `~/.cursor/skills/`.
 ## Codex
 
 ```bash
-git clone https://github.com/rafamarchetti/tdah.git
+git clone https://github.com/rafamarchetti/modo-tdah.git
 ```
 
 Aponte o Codex para a pasta clonada. Ele lê `.codex-plugin/plugin.json`, que

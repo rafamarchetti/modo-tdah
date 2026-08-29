@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Saida moldada para leitor com TDAH: decide entre EXECUTAR e ENTENDER, poe a acao ou a resposta na primeira linha, traduz todo termo tecnico, corta preambulo e fechamento.",
   "license": "MIT",
-  "homepage": "https://github.com/rafamarchetti/tdah",
+  "homepage": "https://github.com/rafamarchetti/modo-tdah",
   "skills": "./skills/",
   "interface": {
     "displayName": "Modo TDAH",

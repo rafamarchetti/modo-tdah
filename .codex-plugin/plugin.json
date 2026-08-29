@@ -5,8 +5,8 @@
   "author": {
     "name": "Rafael Marchetti"
   },
-  "homepage": "https://github.com/rafamarchetti/tdah",
-  "repository": "https://github.com/rafamarchetti/tdah",
+  "homepage": "https://github.com/rafamarchetti/modo-tdah",
+  "repository": "https://github.com/rafamarchetti/modo-tdah",
   "license": "MIT",
   "keywords": ["tdah", "adhd", "output-style", "pt-br", "acessibilidade", "skills"],
   "skills": "./skills/",
@@ -17,7 +17,7 @@
     "developerName": "Rafael Marchetti",
     "category": "Productivity",
     "capabilities": ["Instructions"],
-    "websiteURL": "https://github.com/rafamarchetti/tdah",
+    "websiteURL": "https://github.com/rafamarchetti/modo-tdah",
     "defaultPrompt": [
       "Use o modo tdah nesta tarefa.",
       "Responde no modo ENTENDER.",

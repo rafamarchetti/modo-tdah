@@ -72,7 +72,7 @@ O caminho mais curto para cada uma:
 ### Claude Code — plugin (recomendado)
 
 ```bash
-claude plugin marketplace add rafamarchetti/tdah
+claude plugin marketplace add rafamarchetti/modo-tdah
 claude plugin install tdah
 ```
 
@@ -81,9 +81,9 @@ Fica **ligado sozinho** em toda sessão nova, via hook `SessionStart`.
 ### Claude Code — instalação manual
 
 ```bash
-git clone https://github.com/rafamarchetti/tdah.git
+git clone https://github.com/rafamarchetti/modo-tdah.git
 mkdir -p ~/.claude/skills
-cp -r tdah/skills/tdah ~/.claude/skills/
+cp -r modo-tdah/skills/tdah ~/.claude/skills/
 ```
 
 Depois registre o hook — veja [INSTALL.md](INSTALL.md#claude-code-manual).
@@ -91,14 +91,14 @@ Depois registre o hook — veja [INSTALL.md](INSTALL.md#claude-code-manual).
 ### Gemini CLI
 
 ```bash
-git clone https://github.com/rafamarchetti/tdah.git ~/.gemini/extensions/tdah
+git clone https://github.com/rafamarchetti/modo-tdah.git ~/.gemini/extensions/tdah
 ```
 
 ### Cursor
 
 ```bash
-git clone https://github.com/rafamarchetti/tdah.git
-cp -r tdah/.cursor/skills/tdah .cursor/skills/
+git clone https://github.com/rafamarchetti/modo-tdah.git
+cp -r modo-tdah/.cursor/skills/tdah .cursor/skills/
 ```
 
 ### Codex · Kimi · Qwen · OpenCode

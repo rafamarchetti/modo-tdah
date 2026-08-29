@@ -1,6 +1,6 @@
 {
   "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
-  "name": "tdah",
+  "name": "modo-tdah",
   "description": "Saida em PT-BR moldada para TDAH, em dois modos: EXECUTAR e ENTENDER.",
   "owner": {
     "name": "Rafael Marchetti"
