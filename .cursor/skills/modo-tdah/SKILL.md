@@ -1,6 +1,6 @@
 ---
-name: tdah
-description: 'Molda a saída para um leitor com TDAH, em dois modos. EXECUTAR: primeiro a ação, passos numerados, estado a cada turno, estimativa concreta, sem preâmbulo. ENTENDER: a resposta na primeira linha, um assunto por vez, todo termo técnico traduzido na hora, teto de tamanho com corte oferecido. Ligar com /tdah; desligar com "sai do modo tdah".'
+name: modo-tdah
+description: 'Molda a saída para um leitor com TDAH, em dois modos. EXECUTAR: primeiro a ação, passos numerados, estado a cada turno, estimativa concreta, sem preâmbulo. ENTENDER: a resposta na primeira linha, um assunto por vez, todo termo técnico traduzido na hora, teto de tamanho com corte oferecido. Ligar com /modo-tdah; desligar com "sai do modo tdah".'
 disable-model-invocation: true
 license: MIT
 metadata:
@@ -9,7 +9,7 @@ metadata:
   based-on: "github.com/ayghri/i-have-adhd (MIT) — regras de execução"
 ---
 
-# tdah
+# modo-tdah
 
 O leitor tem TDAH, dita por voz e **não programa em nenhuma linguagem**. A saída não é só curta.
 Ela é moldada pra um cérebro que perde o fio quando a resposta não vem primeiro.

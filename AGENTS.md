@@ -1,7 +1,7 @@
 # Guia para agentes
 
 Este arquivo é o mapa para agentes que trabalham neste repositório. Ele não
-substitui as regras da skill em `skills/tdah/SKILL.md` — se você é o agente
+substitui as regras da skill em `skills/modo-tdah/SKILL.md` — se você é o agente
 aplicando o modo tdah, é aquele arquivo que você segue.
 
 ## Comece aqui
@@ -9,13 +9,13 @@ aplicando o modo tdah, é aquele arquivo que você segue.
 | Quero… | Vá para |
 |---|---|
 | entender o que a skill faz | `README.md` |
-| mudar o comportamento | `skills/tdah/SKILL.md` — **fonte única** |
+| mudar o comportamento | `skills/modo-tdah/SKILL.md` — **fonte única** |
 | instalar em alguma plataforma | `INSTALL.md` |
 | entender como ela liga sozinha | `hooks/always-on.sh` |
 
 ## Regra de edição
 
-`skills/tdah/SKILL.md` é a única fonte. Não edite as cópias — elas são geradas.
+`skills/modo-tdah/SKILL.md` é a única fonte. Não edite as cópias — elas são geradas.
 
 Depois de qualquer edição na fonte:
 
@@ -23,7 +23,7 @@ Depois de qualquer edição na fonte:
 sh scripts/sync.sh
 ```
 
-Isso regrava `.cursor/skills/tdah/SKILL.md`. As demais plataformas leem a fonte
+Isso regrava `.cursor/skills/modo-tdah/SKILL.md`. As demais plataformas leem a fonte
 diretamente pelo caminho declarado no manifesto delas.
 
 ## Mapa dos manifestos
@@ -32,18 +32,18 @@ diretamente pelo caminho declarado no manifesto delas.
 |---|---|---|
 | Claude Code | `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json` | `hooks/hooks.json` → `hooks/always-on.sh` |
 | Codex | `.codex-plugin/plugin.json` | `"skills": "./skills/"` |
-| Gemini CLI | `gemini-extension.json` | `GEMINI.md` → `@./skills/tdah/SKILL.md` |
+| Gemini CLI | `gemini-extension.json` | `GEMINI.md` → `@./skills/modo-tdah/SKILL.md` |
 | Kimi | `kimi.plugin.json` | `"skills": "./skills/"` |
 | Qwen | `qwen-extension.json` | `"skills": "skills"` |
-| OpenCode | `opencode.json` | `.opencode/plugins/tdah.mjs` |
+| OpenCode | `opencode.json` | `.opencode/plugins/modo-tdah.mjs` |
 | Antigravity | `plugin.json`, `.agents/plugins/marketplace.json` | manifesto direto |
-| Cursor | — | `.cursor/skills/tdah/SKILL.md` (cópia) |
+| Cursor | — | `.cursor/skills/modo-tdah/SKILL.md` (cópia) |
 
 ## Diferença de padrão em relação ao i-have-adhd
 
 O `i-have-adhd` exige opt-in: o hook só injeta se existir
 `~/.claude/.i-have-adhd-always`. Aqui é o inverso — **ligado por padrão**, e o
-arquivo `~/.claude/.tdah-off` é que desliga. Se você portar código de lá, a
+arquivo `~/.claude/.modo-tdah-off` é que desliga. Se você portar código de lá, a
 condição do flag está invertida de propósito.
 
 ## O que este repo não tem

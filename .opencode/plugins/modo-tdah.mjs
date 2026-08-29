@@ -1,14 +1,14 @@
-// tdah — plugin do OpenCode.
+// modo-tdah — plugin do OpenCode.
 //
-// Espelha o comportamento do Claude Code / Codex: `skills/tdah/SKILL.md` e a
+// Espelha o comportamento do Claude Code / Codex: `skills/modo-tdah/SKILL.md` e a
 // fonte unica do ruleset.
 //
-//   • Sob demanda — registra o diretorio de skills e o comando /tdah.
+//   • Sob demanda — registra o diretorio de skills e o comando /modo-tdah.
 //   • Sempre ligado — o ruleset inteiro e anexado ao system prompt a cada turno,
 //     equivalente ao hook SessionStart em hooks/always-on.sh.
 //
-// Ligado por padrao. Desligar de vez:  touch ~/.config/opencode/.tdah-off
-// Voltar a ligar:                      rm ~/.config/opencode/.tdah-off
+// Ligado por padrao. Desligar de vez:  touch ~/.config/opencode/.modo-tdah-off
+// Voltar a ligar:                      rm ~/.config/opencode/.modo-tdah-off
 
 import fs from 'fs';
 import os from 'os';
@@ -17,14 +17,14 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const skillsDir = path.resolve(__dirname, '../../skills');
-const skillPath = path.join(skillsDir, 'tdah', 'SKILL.md');
+const skillPath = path.join(skillsDir, 'modo-tdah', 'SKILL.md');
 
 // Flag de desligamento, sob o config dir do OpenCode para que as duas
-// ferramentas fiquem independentes do ~/.claude/.tdah-off do Claude Code.
+// ferramentas fiquem independentes do ~/.claude/.modo-tdah-off do Claude Code.
 const offFlagPath = path.join(
   process.env.XDG_CONFIG_HOME || path.join(os.homedir(), '.config'),
   'opencode',
-  '.tdah-off',
+  '.modo-tdah-off',
 );
 
 // Le o SKILL.md e remove o bloco YAML de frontmatter do topo (--- ... ---).
@@ -37,7 +37,7 @@ function rulesetBody() {
 
 export default async () => {
   return {
-    // Torna a skill descoberivel para a tool `skill` e para o comando /tdah.
+    // Torna a skill descoberivel para a tool `skill` e para o comando /modo-tdah.
     config: async (config) => {
       config.skills = config.skills || {};
       config.skills.paths = config.skills.paths || [];

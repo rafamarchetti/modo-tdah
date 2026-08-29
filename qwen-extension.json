@@ -1,5 +1,5 @@
 {
-  "name": "tdah",
+  "name": "modo-tdah",
   "version": "0.1.0",
   "description": "Saida moldada para TDAH no Qwen Code: dois modos, acao ou resposta primeiro, sem tangente.",
   "skills": "skills"

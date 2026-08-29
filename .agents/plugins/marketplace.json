@@ -1,11 +1,11 @@
 {
-  "name": "tdah",
+  "name": "modo-tdah",
   "interface": {
     "displayName": "Modo TDAH"
   },
   "plugins": [
     {
-      "name": "tdah",
+      "name": "modo-tdah",
       "source": {
         "source": "url",
         "url": "https://github.com/rafamarchetti/modo-tdah.git",

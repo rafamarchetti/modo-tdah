@@ -1,6 +1,6 @@
 # Instalação
 
-A fonte única é `skills/tdah/SKILL.md`. Cada plataforma abaixo só aponta pra ela
+A fonte única é `skills/modo-tdah/SKILL.md`. Cada plataforma abaixo só aponta pra ela
 de um jeito diferente.
 
 ---
@@ -9,7 +9,7 @@ de um jeito diferente.
 
 ```bash
 claude plugin marketplace add rafamarchetti/modo-tdah
-claude plugin install tdah
+claude plugin install modo-tdah
 ```
 
 Pronto. O hook `SessionStart` injeta o ruleset em toda sessão nova, resumida ou
@@ -25,15 +25,15 @@ Conferir se pegou: abra uma sessão nova. O texto da skill aparece no começo.
 ```bash
 git clone https://github.com/rafamarchetti/modo-tdah.git
 mkdir -p ~/.claude/skills ~/.claude/hooks
-cp -r modo-tdah/skills/tdah ~/.claude/skills/
-cp modo-tdah/hooks/always-on.sh ~/.claude/hooks/tdah-activate.sh
+cp -r modo-tdah/skills/modo-tdah ~/.claude/skills/
+cp modo-tdah/hooks/always-on.sh ~/.claude/hooks/modo-tdah-activate.sh
 ```
 
 2. Ajuste o caminho da skill dentro do hook copiado — na instalação manual ela
-   fica em `~/.claude/skills/tdah/SKILL.md`, e não ao lado do hook:
+   fica em `~/.claude/skills/modo-tdah/SKILL.md`, e não ao lado do hook:
 
 ```bash
-sed -i 's|skill_path="$script_dir/../skills/tdah/SKILL.md"|skill_path="$claude_dir/skills/tdah/SKILL.md"|' ~/.claude/hooks/tdah-activate.sh
+sed -i 's|skill_path="$script_dir/../skills/modo-tdah/SKILL.md"|skill_path="$claude_dir/skills/modo-tdah/SKILL.md"|' ~/.claude/hooks/modo-tdah-activate.sh
 ```
 
 3. Registre o hook em `~/.claude/settings.json`:
@@ -47,7 +47,7 @@ sed -i 's|skill_path="$script_dir/../skills/tdah/SKILL.md"|skill_path="$claude_d
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$HOME/.claude/hooks/tdah-activate.sh\"",
+            "command": "sh \"$HOME/.claude/hooks/modo-tdah-activate.sh\"",
             "timeout": 30,
             "statusMessage": "Carregando modo tdah..."
           }
@@ -58,7 +58,7 @@ sed -i 's|skill_path="$script_dir/../skills/tdah/SKILL.md"|skill_path="$claude_d
 }
 ```
 
-Sem o hook, a skill ainda existe — você a chama com `/tdah`. Com o hook, ela
+Sem o hook, a skill ainda existe — você a chama com `/modo-tdah`. Com o hook, ela
 liga sozinha.
 
 ---
@@ -66,11 +66,11 @@ liga sozinha.
 ## Gemini CLI
 
 ```bash
-git clone https://github.com/rafamarchetti/modo-tdah.git ~/.gemini/extensions/tdah
+git clone https://github.com/rafamarchetti/modo-tdah.git ~/.gemini/extensions/modo-tdah
 ```
 
 O `gemini-extension.json` aponta para `GEMINI.md`, que importa o `SKILL.md`
-inteiro com `@./skills/tdah/SKILL.md`.
+inteiro com `@./skills/modo-tdah/SKILL.md`.
 
 ---
 
@@ -79,7 +79,7 @@ inteiro com `@./skills/tdah/SKILL.md`.
 ```bash
 git clone https://github.com/rafamarchetti/modo-tdah.git /tmp/modo-tdah
 mkdir -p .cursor/skills
-cp -r /tmp/modo-tdah/.cursor/skills/tdah .cursor/skills/
+cp -r /tmp/modo-tdah/.cursor/skills/modo-tdah .cursor/skills/
 ```
 
 Por projeto. Para valer em todos, copie para `~/.cursor/skills/`.
@@ -114,22 +114,22 @@ Mesma clonagem. O manifesto é `qwen-extension.json`, com `"skills": "skills"`.
 Adicione ao seu `opencode.json`:
 
 ```json
-{ "plugin": ["./.opencode/plugins/tdah.mjs"] }
+{ "plugin": ["./.opencode/plugins/modo-tdah.mjs"] }
 ```
 
 Dois efeitos:
 
-- registra o comando `/tdah` para ligar sob demanda;
+- registra o comando `/modo-tdah` para ligar sob demanda;
 - anexa o ruleset ao system prompt a cada turno, **ligado por padrão**.
 
-Desligar de vez: `touch ~/.config/opencode/.tdah-off`.
+Desligar de vez: `touch ~/.config/opencode/.modo-tdah-off`.
 
 ---
 
 ## Qualquer LLM sem plugin
 
 ```bash
-cat skills/tdah/SKILL.md
+cat skills/modo-tdah/SKILL.md
 ```
 
 Cole em Custom Instructions (ChatGPT, Grok), nas instruções de um Gem (Gemini
@@ -154,7 +154,7 @@ Peça o corte explícito, nunca "adapta":
 | Sinal | O que significa |
 |---|---|
 | o texto da skill aparece no início da sessão | o hook injetou — está ligado |
-| `ls ~/.claude/.tdah-off` diz que não existe | não há desligamento permanente |
+| `ls ~/.claude/.modo-tdah-off` diz que não existe | não há desligamento permanente |
 | a resposta abre com a ação ou com a resposta | o modelo está aplicando |
 
 Editou o `SKILL.md` no meio de uma sessão? A mudança **não** entra sozinha.

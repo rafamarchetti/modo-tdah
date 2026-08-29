@@ -7,7 +7,7 @@
   },
   "plugins": [
     {
-      "name": "tdah",
+      "name": "modo-tdah",
       "description": "Dois modos de saida para leitor com TDAH: acao primeiro (EXECUTAR) ou resposta primeiro (ENTENDER).",
       "source": "./",
       "category": "productivity"

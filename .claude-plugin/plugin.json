@@ -1,5 +1,5 @@
 {
-  "name": "tdah",
+  "name": "modo-tdah",
   "version": "0.1.0",
   "description": "Molda a saida para um leitor com TDAH em dois modos. EXECUTAR: acao primeiro, passos numerados, estado a cada turno. ENTENDER: resposta na primeira linha, um assunto por vez, termo tecnico traduzido na hora, teto de tamanho.",
   "author": {

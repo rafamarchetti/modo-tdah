@@ -1,5 +1,5 @@
 {
-  "name": "tdah",
+  "name": "modo-tdah",
   "version": "0.1.0",
   "description": "Saida moldada para um leitor com TDAH, em dois modos: EXECUTAR e ENTENDER. PT-BR.",
   "license": "MIT",

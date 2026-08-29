@@ -3,18 +3,18 @@
 #
 # Ligado por padrao, ao contrario do i-have-adhd (que exige opt-in). Desligar
 # sem editar settings.json:
-#   touch ~/.claude/.tdah-off      -> para de injetar
-#   rm    ~/.claude/.tdah-off      -> volta a injetar
+#   touch ~/.claude/.modo-tdah-off      -> para de injetar
+#   rm    ~/.claude/.modo-tdah-off      -> volta a injetar
 #
 # Nunca bloqueia o inicio da sessao: qualquer falha sai com 0.
 
 claude_dir="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
-off_flag="$claude_dir/.tdah-off"
+off_flag="$claude_dir/.modo-tdah-off"
 
 # $0 e o caminho absoluto do script substituido pelo Claude Code, entao
 # resolvemos o SKILL.md relativo a ele em vez de confiar numa variavel de ambiente.
 script_dir=$(dirname -- "$0")
-skill_path="$script_dir/../skills/tdah/SKILL.md"
+skill_path="$script_dir/../skills/modo-tdah/SKILL.md"
 
 [ -f "$off_flag" ] && exit 0
 [ -f "$skill_path" ] || exit 0

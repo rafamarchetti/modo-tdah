@@ -1,4 +1,4 @@
-# tdah
+# modo-tdah
 
 **Uma skill que impede o agente de enterrar a resposta.**
 
@@ -73,7 +73,7 @@ O caminho mais curto para cada uma:
 
 ```bash
 claude plugin marketplace add rafamarchetti/modo-tdah
-claude plugin install tdah
+claude plugin install modo-tdah
 ```
 
 Fica **ligado sozinho** em toda sessão nova, via hook `SessionStart`.
@@ -83,7 +83,7 @@ Fica **ligado sozinho** em toda sessão nova, via hook `SessionStart`.
 ```bash
 git clone https://github.com/rafamarchetti/modo-tdah.git
 mkdir -p ~/.claude/skills
-cp -r modo-tdah/skills/tdah ~/.claude/skills/
+cp -r modo-tdah/skills/modo-tdah ~/.claude/skills/
 ```
 
 Depois registre o hook — veja [INSTALL.md](INSTALL.md#claude-code-manual).
@@ -91,14 +91,14 @@ Depois registre o hook — veja [INSTALL.md](INSTALL.md#claude-code-manual).
 ### Gemini CLI
 
 ```bash
-git clone https://github.com/rafamarchetti/modo-tdah.git ~/.gemini/extensions/tdah
+git clone https://github.com/rafamarchetti/modo-tdah.git ~/.gemini/extensions/modo-tdah
 ```
 
 ### Cursor
 
 ```bash
 git clone https://github.com/rafamarchetti/modo-tdah.git
-cp -r modo-tdah/.cursor/skills/tdah .cursor/skills/
+cp -r modo-tdah/.cursor/skills/modo-tdah .cursor/skills/
 ```
 
 ### Codex · Kimi · Qwen · OpenCode
@@ -112,7 +112,7 @@ Cada um lê um manifesto próprio já incluído no repo
 Não tem plugin? Copie o arquivo e cole no campo de instruções:
 
 ```bash
-cat skills/tdah/SKILL.md
+cat skills/modo-tdah/SKILL.md
 ```
 
 Cole em **Custom Instructions** (ChatGPT, Grok), nas instruções de um **Gem**
@@ -130,36 +130,36 @@ o modelo "melhora" as regras e você perde o que foi calibrado:
 |---|---|
 | desligar nesta conversa | diga **"sai do modo tdah"** ou **"modo normal"** |
 | religar nesta conversa | diga **"modo tdah"** |
-| desligar de vez (Claude Code) | `touch ~/.claude/.tdah-off` |
-| religar de vez | `rm ~/.claude/.tdah-off` |
-| desligar de vez (OpenCode) | `touch ~/.config/opencode/.tdah-off` |
+| desligar de vez (Claude Code) | `touch ~/.claude/.modo-tdah-off` |
+| religar de vez | `rm ~/.claude/.modo-tdah-off` |
+| desligar de vez (OpenCode) | `touch ~/.config/opencode/.modo-tdah-off` |
 
 O liga/desliga por frase **não deixa rastro em disco** — é só comportamento do
-modelo. Só o arquivo `.tdah-off` é verificável com `ls`.
+modelo. Só o arquivo `.modo-tdah-off` é verificável com `ls`.
 
 ---
 
 ## Como o repo está montado
 
-`skills/tdah/SKILL.md` é a **fonte única**. Todo o resto aponta pra ele.
+`skills/modo-tdah/SKILL.md` é a **fonte única**. Todo o resto aponta pra ele.
 
 ```
-skills/tdah/SKILL.md        fonte única — edite só aqui
-hooks/always-on.sh          injeta o ruleset a cada sessão (Claude Code)
-hooks/hooks.json            registra o hook no SessionStart
-scripts/sync.sh             propaga a fonte para as cópias que cada plataforma exige
-.claude-plugin/             manifesto do plugin + marketplace (Claude Code)
-.codex-plugin/              manifesto do Codex
-.cursor/skills/tdah/        cópia para o Cursor (gerada pelo sync.sh)
-.opencode/                  comando /tdah + plugin sempre-ligado
-.agents/plugins/            marketplace do Antigravity
-GEMINI.md                   arquivo de contexto do Gemini CLI
+skills/modo-tdah/SKILL.md     fonte única — edite só aqui
+hooks/always-on.sh            injeta o ruleset a cada sessão (Claude Code)
+hooks/hooks.json              registra o hook no SessionStart
+scripts/sync.sh               propaga a fonte para as cópias de cada plataforma
+.claude-plugin/               manifesto do plugin + marketplace (Claude Code)
+.codex-plugin/                manifesto do Codex
+.cursor/skills/modo-tdah/     cópia para o Cursor (gerada pelo sync.sh)
+.opencode/                    comando /modo-tdah + plugin sempre-ligado
+.agents/plugins/              marketplace do Antigravity
+GEMINI.md                     arquivo de contexto do Gemini CLI
 gemini-extension.json · kimi.plugin.json · qwen-extension.json · opencode.json
 ```
 
 Editou o `SKILL.md`? Rode `sh scripts/sync.sh` para propagar.
 
-Já usa a skill instalada em `~/.claude/skills/tdah/` e quer trazer a sua versão
+Já usa a skill instalada em `~/.claude/skills/modo-tdah/` e quer trazer a sua versão
 pra cá: `sh scripts/sync.sh --from-claude`.
 
 ---
